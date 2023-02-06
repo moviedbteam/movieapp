@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* importation du CSS de bootstrap */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* notre style */
+body {
+    background: rgb(26, 26, 30);
+    color:rgb(227, 227, 227);
+
+}
+
+html, body { height: calc(100vh - 60px); }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

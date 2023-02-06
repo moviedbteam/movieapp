@@ -1,0 +1,8 @@
+<form [formGroup]="commentForm" (submit)="onSubmitCommentForm()">
+    <textarea class="form-control" formControlName="content"></textarea>
+
+    <div class="d-flex justify-content-end py-2">
+        <button class="btn btn-dark btn-sm">Envoyer</button>
+    </div>
+    
+</form>
