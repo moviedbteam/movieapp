@@ -2,8 +2,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 import { MovieModel } from '../shared/models/movie.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +25,7 @@ export class MovieService {
 
 
 
-
+  apitTmdb = environment.base_url_apiTmdb;
 
 
 
@@ -54,7 +56,7 @@ export class MovieService {
   
   
    getMoviesFromApi():void {
-    let urlApi = 'https://api.themoviedb.org/3/discover/movie';
+    let urlApi = this.apitTmdb+'/discover/movie';
     let params = new HttpParams()
     .set('api_key', '267af5120325d394d4ce784b430c2043')
     .set('language', 'fr')
